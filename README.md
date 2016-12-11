@@ -3,6 +3,6 @@
 # 使用方法
 使用的时候要修改一下脚本里面的工程目录为你自己的总的工程目录
 或者放到主工程目录下也可以
-有可能要修改一下权限才能运行，使用 chmod 777 meituanswitch.sh
-然后运行 ./meituanswitch release/1.0.1
+有可能要修改一下权限才能运行，使用 chmod 777 gitswitch.sh
+然后运行 ./gitswitch release/1.0.1
 就会将目录下的所有分支切换到1.0.1

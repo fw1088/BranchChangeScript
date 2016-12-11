@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-PROJECTS_DIR=/Users/fangwei/Desktop/testbranch/DianpingCode
+PROJECTS_DIR=/Users/crl/Desktop/testbranch/DianpingCode
 ISUPDATE=0
 ##排除以下情况
 ##1.非目录
@@ -46,5 +46,9 @@ function update_branch(){
         fi
     fi
 }
+if [ ! -d "$PROJECTS_DIR" ];then
+    PROJECTS_DIR="$PWD"
+    echo $PROJECTS_DIR
+fi
 cd $PROJECTS_DIR
 update_all $1

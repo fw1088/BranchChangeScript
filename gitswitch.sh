@@ -4,7 +4,7 @@
 PROJECTS_DIR=/Users/crl
 
 ##用于控制切换分支的时候是否拉取
-ISUPDATE=0 
+ISUPDATE=1 
 
 ##排除以下情况
 ##1.非目录

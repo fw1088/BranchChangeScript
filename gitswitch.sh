@@ -1,7 +1,7 @@
 #!/bin/bash -x
 ##author fangwei 2016.12.11
 
-PROJECTS_DIR=/Users/crl/Desktop/testbranch/DianpingCode
+PROJECTS_DIR=/Users/crl
 
 ##用于控制切换分支的时候是否拉取
 ISUPDATE=0 

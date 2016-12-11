@@ -1,11 +1,14 @@
 #!/bin/bash -x
+##author fangwei 2016.12.11
 
 PROJECTS_DIR=/Users/crl/Desktop/testbranch/DianpingCode
-ISUPDATE=0
+
+##用于控制切换分支的时候是否拉取
+ISUPDATE=0 
+
 ##排除以下情况
 ##1.非目录
 ##2.非git目录
-
 function is_git_dir(){
     param=`find $PWD -name ".git"`
     if [ -z "$param" ];then
@@ -15,6 +18,7 @@ function is_git_dir(){
     fi
 }
 
+##更新所有目录，并拉取
 function update_all(){
     for d in `ls`
     do
@@ -28,16 +32,12 @@ function update_all(){
                 fi
                 update_branch $1
                 echo "update success ^_^"
-            else
-                echo "$PWD is not a git dir!"
             fi
-        else
-            echo "$d is not a directory"
         fi
     done
 }
 
-
+##拉取分支
 function update_branch(){
     if [ -n "$1" ];then
         branchparam=`git branch -a | grep "$1"`
@@ -46,6 +46,8 @@ function update_branch(){
         fi
     fi
 }
+
+##主函数开始执行
 if [ ! -d "$PROJECTS_DIR" ];then
     PROJECTS_DIR="$PWD"
     echo $PROJECTS_DIR
